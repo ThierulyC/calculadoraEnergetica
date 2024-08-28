@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Energética</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Calculadora Energética</h1>
+
+    <form id="form-aparelhos">
+        <div class="aparelho-container">
+            <div class="form-group">
+                <label for="ambiente">Ambiente</label>
+                <select id="ambiente">
+                    <option value="sala">Sala</option>
+                    <option value="cozinha">Cozinha</option>
+                    <option value="banheiro">Banheiro</option>
+                    <option value="quarto">Quarto</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="aparelho">Aparelho</label>
+                <select id="aparelho">
+                    <!-- As opções serão preenchidas pelo JavaScript -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="potencia">Potência (W)</label>
+                <input type="number" id="potencia" placeholder="---">
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" id="quantidade" value="1">
+            </div>
+
+            <div class="form-group">
+                <label for="tempo">Tempo (horas)</label>
+                <input type="number" id="tempo" value="24">
+            </div>
+        </div>
+
+        <button type="button" id="add-aparelho-btn">+</button>
+
+        <div class="form-group">
+            <label for="bandeira">Bandeira Tarifária</label>
+            <select id="bandeira">
+                <option value="verde">Verde - R$ 0,00</option>
+                <option value="amarela">Amarela - R$ 0,04</option>
+                <option value="vermelha-1">Vermelha 1 - R$ 0,08</option>
+                <option value="vermelha-2">Vermelha 2 - R$ 0,10</option>
+            </select>
+        </div>
+
+        <button type="button" id="calcular-btn">Calcular</button>
+    </form>
+    
+    <div id="resultado">
+        <p id="consumo"></p>
+        <p id="custo"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
